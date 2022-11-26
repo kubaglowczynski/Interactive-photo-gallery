@@ -2,7 +2,7 @@ let activeIndex = 0;
 
 const groups = document.getElementsByClassName("card-group");
 
-const handleLoveClick = () => {
+const handleRightClick = () => {
   const nextIndex = activeIndex + 1 <= groups.length - 1 ? activeIndex + 1 : 0;
   
   const currentGroup = document.querySelector(`[data-index="${activeIndex}"]`),
@@ -18,7 +18,7 @@ const handleLoveClick = () => {
   });
 }
 
-const handleHateClick = () => {
+const handleLeftClick = () => {
   const nextIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : groups.length - 1;
   
   const currentGroup = document.querySelector(`[data-index="${activeIndex}"]`),
